@@ -1,7 +1,9 @@
 
 import Metrics from'../assets/01.jpg'
+import { useState } from 'react' 
 import { Hero } from '../data/data'
 import { motion } from "framer-motion"
+
  const container= (delay)=>({
   hidden: {x:-100, opacity:0},
   visible: {
@@ -20,7 +22,24 @@ import { motion } from "framer-motion"
         duration: 0.5
       }}
  })
+ 
 function Home() {
+  const [hideen , useHideen] =useState("20")
+  const [read , useRead] =useState("Read More...")
+  const value = 'max-h-'+hideen
+  
+  const handdleHidden=()=>{
+    if(hideen === "20"){
+       useHideen(hideen=>"full")
+       useRead(read=>"Hidden...")
+    }
+    else{
+      useHideen(hideen=>"20")
+      
+      useRead(read=>"Read More...") 
+    }
+      
+  }
   return (
     <div className="w-full h-4/5 text-white sm:text-white flex flex-col lg:flex-row sm:flex-col  items-center justify-evenly mt-20 sm:text-center ">
       <div className='lg:w-1/2 sm:p-10 sm:mt-5 text-center lg:text-start lg:mt-10'>
@@ -41,9 +60,12 @@ function Home() {
          variants={container(1)} 
          initial="hidden"
          animate="visible"
-         className='w-full pr-10 pl-10 lg:p-0 text-sm font-medium max-h-20 overflow-hidden lg:max-h-full'>
-          {Hero}
+         className={value+' overflow-hidden  w-full pr-10 pl-10 lg:p-0 text-sm font-medium  lg:max-h-full'}>
+          {Hero} 
+          
         </motion.p>
+        <p onClick={handdleHidden}  className='text-blue-400 lg:hidden curser-pointer'>
+          {read}</p>
        
       </div>
       <div>

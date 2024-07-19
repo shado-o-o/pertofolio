@@ -22,12 +22,12 @@ function Tecnologic() {
        transition={{duration:0.5}}
       
       className="w-full flex justify-center mt-5 gap-5">
-        <FaReact className="text-5xl text-blue-500"/>
-        <SiExpress className="text-5xl text-white   "/>
-        <SiMongodb className="text-5xl text-green-500"/>
-        <SiNextdotjs className="text-5xl text-white"/>
-        <RiTailwindCssFill className="text-5xl text-blue-700"/>
-        <FaNodeJs className="text-5xl text-green-500"/>
+        <FaReact className="text-4xl  lg:text-5xl text-blue-500"/>
+        <SiExpress className="text-4xl lg:text-5xl text-white   "/>
+        <SiMongodb className="text-4xl lg:text-5xl text-green-500"/>
+        <SiNextdotjs className="text-4xl lg:text-5xl text-white"/>
+        <RiTailwindCssFill className="text-4xl lg:text-5xl text-blue-700"/>
+        <FaNodeJs className="text-4xl lg:text-5xl text-green-500"/>
       </motion.div>
     </div>
   )

@@ -2,7 +2,7 @@ import ExperTwo from "./ExperTwo"
 import { motion } from "framer-motion"
 function Exper() {
   return (
-    <div className="w-full h-full mt-20 flex flex-col justify-center ">
+    <div className="w-full h-full mt-20 flex flex-col justify-start sm:justify-center lg:justify-center ">
       <div>
         <motion.h1
          whileInView={{y:0,opacity:1}}

@@ -10,7 +10,7 @@ function App() {
 
  
   return (
-    <div className="w-full overflow-hidden h-full  ">
+    <div className="w-full overflow-hidden h-full   ">
       <Navbar />
       <Home/>
       <About/>
